@@ -10,11 +10,10 @@ const jscode = fs.readFileSync("./demo.js", {
 
 let ast = parser.parse(jscode);
 
-let visitor = {};
-visitor.FunctionExpression = function (path) {
-    console.log("4ra1n");
-};
-traverse(ast, visitor);
+let code = generator(ast, {
+    retainLines: false,
+    comments: false,
+    compact: true
+}).code;
 
-let code = generator(ast).code;
-console.log(code);
+fs.writeFile("./demoNew.js", code, (err) => { });
