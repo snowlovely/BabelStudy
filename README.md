@@ -15,6 +15,14 @@
 09. 控制流平坦化（switch）
 10. 逗号表达式混淆
 
+配置：
+```shell
+npm install @babel/parser
+npm install @babel/traverse
+npm install @babel/types
+npm install @babel/ganerator
+```
+
 ## 关于
 
 参考《反爬虫AST原理与还原混淆实战》（清华大学出版社）
