@@ -4,7 +4,7 @@ const traverse = require("@babel/traverse").default;
 const t = require("@babel/types");
 const generator = require("@babel/generator").default;
 
-const jscode = fs.readFileSync("./demo.js", {
+const jscode = fs.readFileSync("../demo.js", {
     encoding: "utf-8"
 });
 
@@ -16,4 +16,4 @@ let code = generator(ast, {
     compact: true
 }).code;
 
-fs.writeFile("./demoNew.js", code, (err) => { });
+fs.writeFile("./demo-new.js", code, (err) => { });
